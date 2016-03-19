@@ -7,4 +7,4 @@ Mapping the differences between Sorl and Elasticsearch
 | num results        | q=\*:\*&**rows**=10 | {"query":{"match_all":{}},"**size**":1}|
 | paginations    | q=\*:\*&**start**=10  | {"query":{"match_all":{}},"**from**":10} |
 |field list|q=\*:\*&**fl**=account_number,balance| {"query":{"match_all":{}},"**_source**":["account_number","balance"]}|
-|basic fielded search query|q=\*:\*&fq=account_number:20 | {"query":{**"match":{"account_number":20}**}}|
+|basic fielded search query|**q=account_number:20** | {"query":{**"match":{"account_number":20}**}}|
